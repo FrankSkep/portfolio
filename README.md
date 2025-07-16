@@ -1,6 +1,6 @@
 # Portfolio
 
-This is a personal portfolio built with **SvelteKit** and **TailwindCSS**. It showcases projects, technologies, education, and personal traits.
+This is a personal portfolio built with **SvelteKit** and **TailwindCSS**. It showcases about, projects, technologies and education.
 
 ## Tech Stack
 
