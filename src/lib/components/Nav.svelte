@@ -1,6 +1,8 @@
 <script>
   import { slide } from "svelte/transition";
   import Icon from "@iconify/svelte";
+  import LanguageSelector from "./LanguageSelector.svelte";
+  
   export let personal;
   export let navItems;
   export let currentSection;
@@ -17,8 +19,8 @@
         {personal.nickname.toLowerCase()}
       </div>
 
-      <!-- Navegación desktop -->
-      <div class="hidden md:flex items-center gap-6">
+      <!-- Desktop navigation -->
+      <div class="hidden md:flex items-center gap-4">
         {#each navItems as item}
           <button
             on:click={() => smoothScroll(item.id)}
@@ -31,9 +33,12 @@
             {item.label}
           </button>
         {/each}
+        
+        <!-- Language selector -->
+        <LanguageSelector />
       </div>
 
-      <!-- Botón menú móvil -->
+      <!-- Mobile menu button -->
       <button
         on:click={toggleMobileMenu}
         class="md:hidden p-2 rounded-lg hover:bg-[#272736] transition-colors cursor-pointer"
@@ -46,7 +51,7 @@
         />
       </button>
 
-      <!-- Menú móvil -->
+      <!-- Mobile menu -->
       {#if mobileMenuOpen}
         <div
           transition:slide={{ duration: 200 }}
@@ -66,6 +71,11 @@
                   {item.label}
                 </button>
               {/each}
+              
+              <!-- Mobile language selector -->
+              <div class="mt-4 pt-4 border-t border-[#2a2a35]">
+                <LanguageSelector />
+              </div>
             </div>
           </div>
         </div>

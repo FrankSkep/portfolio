@@ -1,0 +1,84 @@
+{
+  "en": {
+    "commands": {
+      "whoami": "whoami",
+      "cat": "cat ~/.tech-stack",
+      "ls": "ls -la ~/projects",
+      "education": "education --list",
+      "connect": "connect --socials"
+    },
+    "sections": {
+      "home": "Home",
+      "projects": "Projects",
+      "technologies": "Technologies",
+      "education": "Education",
+      "contact": "Contact"
+    },
+    "titles": {
+      "projects": "Projects",
+      "technologies": "Technologies",
+      "education": "Education",
+      "contact": "Contact"
+    },
+    "descriptions": {
+      "projects": "Here are some of my most important projects:",
+      "technologies": "Technology stack I regularly work with:",
+      "contact": "You can find me on the following platforms:"
+    },
+    "labels": {
+      "primaryTech": "Primary Technologies",
+      "additionalTech": "Additional Technologies",
+      "viewMore": "View more",
+      "viewLess": "View less",
+      "featuredHighlights": "Featured characteristics:",
+      "viewOnGithub": "View on GitHub",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email",
+      "backToTop": "Back to top",
+      "status": "Status",
+      "techNote": "Although my specialty is backend development, I am also passionate about working on fullstack projects to understand and add value to the entire product lifecycle."
+    }
+  },
+  "es": {
+    "commands": {
+      "whoami": "whoami",
+      "cat": "cat ~/.tech-stack",
+      "ls": "ls -la ~/projects",
+      "education": "education --list",
+      "connect": "connect --socials"
+    },
+    "sections": {
+      "home": "Inicio",
+      "projects": "Proyectos",
+      "technologies": "Tecnologías",
+      "education": "Educación",
+      "contact": "Contacto"
+    },
+    "titles": {
+      "projects": "Proyectos",
+      "technologies": "Tecnologías",
+      "education": "Educación",
+      "contact": "Contacto"
+    },
+    "descriptions": {
+      "projects": "Los siguientes son algunos de mis proyectos más importantes:",
+      "technologies": "Stack tecnológico con el que trabajo regularmente:",
+      "contact": "Puedes encontrarme en las siguientes plataformas:"
+    },
+    "labels": {
+      "primaryTech": "Tecnologías Principales",
+      "additionalTech": "Tecnologías Adicionales",
+      "viewMore": "Ver más",
+      "viewLess": "Ver menos",
+      "featuredHighlights": "Características destacadas:",
+      "viewOnGithub": "Ver en GitHub",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email",
+      "backToTop": "Volver arriba",
+      "status": "Estado",
+      "techNote": "Aunque mi especialidad es el desarrollo backend, también me apasiona trabajar en proyectos fullstack para comprender y aportar valor a todo el ciclo de vida del producto."
+    }
+  }
+}

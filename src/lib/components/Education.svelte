@@ -1,14 +1,15 @@
 <script>
   import Icon from "@iconify/svelte";
   export let education;
+  export let t;
 </script>
 
 <section id="education" class="max-w-4xl mx-auto px-6 py-16">
   <div class="mb-12">
     <span class="text-[#22d3ee] text-sm font-medium"
-      ><span class="text-[#fbbf24]">$</span> education --list</span
+      ><span class="text-[#fbbf24]">$</span> {t.commands.education}</span
     >
-    <h2 class="text-3xl font-bold text-[#f8fafc] mt-2 mb-6">Education</h2>
+    <h2 class="text-3xl font-bold text-[#f8fafc] mt-2 mb-6">{t.sections.education}</h2>
   </div>
 
   <div class="space-y-6">
@@ -19,7 +20,7 @@
             {edu.degree}
           </h3>
           <span
-            class="text-[#9ca3af] text-sm bg-[#0a0a0f] px-3 py-1 rounded border border-[#2a2a35]"
+            class="text-[#9ca3af] text-sm bg-[#181825] border border-[#2a2a35] px-3 py-1 rounded"
           >
             {edu.period}
           </span>

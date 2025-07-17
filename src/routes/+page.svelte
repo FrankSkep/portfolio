@@ -1,5 +1,8 @@
 <script lang="ts">
-  import portfolioData from "$lib/data/portfolio.json";
+  import portfolioDataEn from "$lib/data/portfolio-en.json" with { type: "json" };
+  import portfolioDataEs from "$lib/data/portfolio-es.json" with { type: "json" };
+  import translations from "$lib/data/translations.json" with { type: "json" };
+  import { currentLanguage } from '$lib/stores/language.js';
   import { onMount } from "svelte";
   import Nav from "$lib/components/Nav.svelte";
   import Header from "$lib/components/Header.svelte";
@@ -10,18 +13,26 @@
   import Footer from "$lib/components/Footer.svelte";
   import Icon from "@iconify/svelte";
 
-  const { personal, projects, technologies, education, footer } = portfolioData;
+  // Define types for translations
+  type Language = 'en' | 'es';
+  type Translations = typeof translations;
+
   let showHighlights = {};
   let currentSection = "home";
   let showScrollTop = false;
   let mobileMenuOpen = false;
 
-  const navItems = [
-    { id: "home", label: "Home", icon: "mdi:home" },
-    { id: "projects", label: "Projects", icon: "mdi:folder" },
-    { id: "technologies", label: "Tech", icon: "mdi:tools" },
-    { id: "education", label: "Education", icon: "mdi:school" },
-    { id: "socials", label: "Contact", icon: "mdi:account" },
+  // Reactive data based on language with specific types
+  $: portfolioData = $currentLanguage === 'es' ? portfolioDataEs : portfolioDataEn;
+  $: t = translations[$currentLanguage as Language];
+  $: ({ personal, projects, technologies, education, footer } = portfolioData);
+
+  $: navItems = [
+    { id: "home", label: t.sections.home, icon: "mdi:home" },
+    { id: "projects", label: t.sections.projects, icon: "mdi:folder" },
+    { id: "technologies", label: t.sections.technologies, icon: "mdi:tools" },
+    { id: "education", label: t.sections.education, icon: "mdi:school" },
+    { id: "socials", label: t.sections.contact, icon: "mdi:account" },
   ];
 
   function handleScroll() {
@@ -74,16 +85,17 @@
 />
 
 <div class="min-h-screen bg-[#1c1c21] text-[#e5e7eb] font-mono pt-12 animate-fade-in">
-  <Header {personal} />
-  <Projects {projects} {showHighlights} />
-  <Technologies {technologies} />
-  <Education {education} />
+  <Header {personal} {t} />
+  <Projects {projects} {showHighlights} {t} />
+  <Technologies {technologies} {t} />
+  <Education {education} {t} />
   <Socials
     socials={[
-      { href: personal.socials.github, icon: "mdi:github", label: "GitHub" },
-      { href: personal.socials.linkedin, icon: "mdi:linkedin", label: "LinkedIn" },
-      { href: "mailto:" + personal.socials.email, icon: "mdi:email", label: "Email" },
+      { href: personal.socials.github, icon: "mdi:github", label: t.labels.github },
+      { href: personal.socials.linkedin, icon: "mdi:linkedin", label: t.labels.linkedin },
+      { href: "mailto:" + personal.socials.email, icon: "mdi:email", label: t.labels.email },
     ]}
+    {t}
   />
   <Footer {footer} />
 </div>
@@ -92,7 +104,7 @@
   <button
     on:click={() => smoothScroll("home")}
     class="fixed bottom-6 right-6 p-3 bg-[#22d3ee] text-[#0a0a0f] rounded-full shadow-lg hover:bg-[#0891b2] transition-colors z-50 cursor-pointer"
-    title="Volver arriba"
+    title={t.labels.backToTop}
   >
     <Icon icon="mdi:arrow-up" width="24" height="24" />
   </button>
@@ -122,7 +134,7 @@
     scroll-padding-top: 100px;
   }
 
-  /* Scrollbar elegante */
+  /* Scrollbar */
   :global(::-webkit-scrollbar) {
     width: 8px;
   }
@@ -140,13 +152,13 @@
     background: #22d3ee;
   }
 
-  /* Efectos de selección */
+  /* Selection effects */
   :global(::selection) {
     background: #22d3ee;
     color: #0a0a0f;
   }
 
-  /* Animación de entrada */
+  /* Fade-in animation */
   @keyframes fade-in {
     from {
       opacity: 0;
@@ -162,7 +174,6 @@
     animation: fade-in 1s ease-out;
   }
 
-  /* Mejor espaciado en móviles */
   @media (max-width: 768px) {
     :global(h1) {
       font-size: 2.5rem !important;

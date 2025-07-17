@@ -3,16 +3,17 @@
   import Icon from "@iconify/svelte";
   export let projects;
   export let showHighlights;
+  export let t;
 </script>
 
 <section id="projects" class="max-w-4xl mx-auto px-6 py-16">
   <div class="mb-12">
     <span class="text-[#22d3ee] text-sm font-medium"
-      ><span class="text-[#fbbf24]">$</span> ls -la ~/projects</span
+      ><span class="text-[#fbbf24]">$</span> {t.commands.ls}</span
     >
-    <h2 class="text-3xl font-bold text-[#f8fafc] mt-2 mb-4">Projects</h2>
+    <h2 class="text-3xl font-bold text-[#f8fafc] mt-2 mb-4">{t.sections.projects}</h2>
     <p class="text-[#d1d5db] mb-8 text-lg">
-      Los siguientes son algunos de mis proyectos más importantes:
+      {t.descriptions.projects}
     </p>
   </div>
 
@@ -30,7 +31,7 @@
             target="_blank"
             rel="noopener noreferrer"
             class="flex items-center gap-2 text-[#9ca3af] hover:text-[#22d3ee] transition-colors"
-            title="Ver en GitHub"
+            title={t.labels.viewOnGithub}
           >
             <Icon icon="mdi:github" width="20" height="20" />
             <span class="text-sm">GitHub</span>
@@ -41,22 +42,22 @@
           {project.description}
         </p>
 
-        <!-- Botón para alternar "Ver más" -->
+        <!-- Button to toggle "View more" -->
         {#if project.highlights}
           <button
             on:click={() => (showHighlights[index] = !showHighlights[index])}
             class="text-sm text-[#fbbf24] hover:text-[#f59e0b] transition-colors mb-4 cursor-pointer"
           >
-            {showHighlights[index] ? "Ver menos" : "Ver más"}
+            {showHighlights[index] ? `${t.labels.viewLess}` : `${t.labels.viewMore}`}
           </button>
 
           <!-- Highlights -->
           {#if showHighlights[index]}
             <div
-              class="mb-4 p-4 bg-[#0a0a0f] border border-[#2a2a35] rounded-lg"
+              class="mb-4 p-4 bg-[#181825] border border-[#2a2a35] rounded-lg"
             >
               <h4 class="text-sm font-medium text-[#22d3ee] mb-3">
-                Características destacadas:
+                {t.labels.featuredHighlights}
               </h4>
               <ul class="space-y-2">
                 {#each project.highlights as highlight}

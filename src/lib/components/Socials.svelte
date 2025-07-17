@@ -1,18 +1,19 @@
 <script>
   import Icon from "@iconify/svelte";
   export let socials;
+  export let t;
 </script>
 
 <section id="socials" class="max-w-4xl mx-auto px-6 py-16">
   <div class="mb-12">
     <span class="text-[#22d3ee] text-sm font-medium"
-      ><span class="text-[#fbbf24]">$</span> connect --socials</span
+      ><span class="text-[#fbbf24]">$</span> {t.commands.connect}</span
     >
     <h2 class="text-3xl font-bold text-[#f8fafc] mt-2 mb-4">
       Contact
     </h2>
     <p class="text-[#d1d5db] mb-8 text-lg">
-      Puedes encontrarme en las siguientes plataformas:
+      {t.descriptions.contact}
     </p>
   </div>
 
