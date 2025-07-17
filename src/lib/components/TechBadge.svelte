@@ -88,6 +88,19 @@
     minimal: "border-none bg-transparent"
   };
 
+  // Cachear resultados
+  let cachedIcon: string;
+  let cachedColor: string;
+  let cachedConfig: any;
+  let cachedVariantClass: string;
+
+  $: {
+    if (!cachedIcon) cachedIcon = getTechIcon(tech);
+    if (!cachedColor) cachedColor = getTechColor(tech);
+    if (!cachedConfig) cachedConfig = sizeConfigs[size];
+    if (!cachedVariantClass) cachedVariantClass = variantConfigs[variant];
+  }
+
   function getTechIcon(tech: string): string {
     return techIcons[tech as keyof typeof techIcons] || "carbon:code";
   }
@@ -102,17 +115,17 @@
 </script>
 
 <span
-  class="inline-flex items-center {config.padding} {config.text} {config.gap} {config.radius} {colorClass} {variantClass}
+  class="tech-badge inline-flex items-center {cachedConfig.padding} {cachedConfig.text} {cachedConfig.gap} {cachedConfig.radius} {cachedColor} {cachedVariantClass}
   font-semibold shadow-sm backdrop-blur-md bg-opacity-80
-  transition-all duration-200 hover:scale-105 hover:shadow-md hover:brightness-110 cursor-default select-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-{colorClass.split(' ')[1]}"
+  transition-transform duration-200 hover:scale-105 cursor-default select-none"
   title={tech}
 >
-  <Icon icon={getTechIcon(tech)} width={config.icon} height={config.icon} class="flex-shrink-0" />
+  <Icon icon={cachedIcon} width={cachedConfig.icon} height={cachedConfig.icon} class="flex-shrink-0" />
   <span>{tech}</span>
 </span>
 
 <style>
-  span {
+  .tech-badge {
     backdrop-filter: blur(6px);
   }
 </style>

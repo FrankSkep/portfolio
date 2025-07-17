@@ -86,9 +86,13 @@
 
 <div class="min-h-screen bg-[#1c1c21] text-[#e5e7eb] font-mono pt-12 animate-fade-in">
   <Header {personal} {t} />
+  <div class="section-separator"></div>
   <Projects {projects} {showHighlights} {t} />
+  <div class="section-separator"></div>
   <Technologies {technologies} {t} />
+  <div class="section-separator"></div>
   <Education {education} {t} />
+  <div class="section-separator"></div>
   <Socials
     socials={[
       { href: personal.socials.github, icon: "mdi:github", label: t.labels.github },
@@ -111,6 +115,16 @@
 {/if}
 
 <style>
+  .section-separator {
+    max-width: 60%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #2d69e252, transparent);
+    contain: layout style paint;
+  }
+
   :global(body) {
     margin: 0;
     padding: 0;
