@@ -1,103 +1,97 @@
 {
-  "personal": {
-    "name": "Francisco Cornejo Pacheco",
-    "nickname": "FrankSkep",
-    "location": "Ensenada, México",
-    "role": "Desarrollador Backend | Ingeniero de Software",
-    "description": "Desarrollador backend especializado en Java y Spring, con experiencia creando APIs robustas y arquitecturas bien diseñadas. También desarrollo frontend con SvelteKit, lo que me permite abordar soluciones de forma integral. Me apasiona escribir código limpio, escalable y aprender nuevas tecnologías para resolver problemas reales con impacto.",
-    "socials": {
-      "github": "https://github.com/FrankSkep",
-      "linkedin": "https://www.linkedin.com/in/FrankSkep",
-      "email": "f.cornejo.pacheco@gmail.com"
-    },
-    "status": "Disponible para nuevas oportunidades"
-  },
-  "projects": [
-    {
-      "name": "Fixium Ecosystem",
-      "description": "Plataforma integral para talleres de reparación iOS, que optimiza operaciones y seguridad mediante un backend multi-tenant en Java Spring Boot, un frontend multiplataforma en SvelteKit + Electron y un servicio local FastAPI para diagnósticos. Incorpora verificación facial con AWS Rekognition, herramientas técnicas impulsadas por IA y almacenamiento de imágenes en Cloudinary.",
-      "tech": [
-        "Java",
-        "Spring Boot",
-        "Python",
-        "FastAPI",
-        "PostgreSQL",
-        "SvelteKit",
-        "Electron",
-        "AWS Rekognition",
-        "Cloudinary"
-      ],
-      "github": "https://github.com/FrankSkep/fixium-ecosystem",
-      "highlights": [
-        "Gestión completa de usuarios, talleres, clientes, dispositivos, tickets y reparaciones",
-        "Arquitectura multi-tenant con seguridad JWT",
-        "Verificación facial para operaciones críticas",
-        "Herramientas técnicas con IA (asistente técnico y análisis de panic logs)",
-        "Diagnóstico y restauración de dispositivos iOS con servicio local FastAPI"
-      ]
-    },
-    {
-      "name": "Order Management Microservices",
-      "description": "Sistema backend de microservicios para gestionar productos, órdenes y pagos de forma escalable y segura. Utiliza Spring Cloud para configuración centralizada, descubrimiento de servicios y un API Gateway protegido con JWT, integrando comunicación eficiente entre microservicios con OpenFeign.",
-      "tech": [
-        "Java",
-        "Spring Boot",
-        "Spring Cloud",
-        "PostgreSQL",
-        "OpenFeign"
-      ],
-      "github": "https://github.com/FrankSkep/orders-microservices",
-      "highlights": [
-        "Arquitectura completa de microservicios con Spring Cloud",
-        "Config Server centralizado y Eureka Discovery",
-        "API Gateway seguro con JWT y control de roles",
-        "Comunicación inter-servicios eficiente con OpenFeign",
-        "Documentación interactiva con Swagger UI"
-      ]
-    },
-    {
-      "name": "Inventory REST API",
-      "description": "API RESTful modular para gestión de inventarios, productos y proveedores, con control de stock, generación de reportes PDF y almacenamiento de imágenes en Cloudinary. Desarrollada con Spring Boot y seguridad basada en JWT.",
-      "tech": ["Java", "Spring Boot", "MySQL", "Cloudinary", "Docker"],
-      "github": "https://github.com/FrankSkep/inventory-restful-api",
-      "highlights": [
-        "CRUD completo con validaciones y filtros",
-        "Notificaciones por bajo stock",
-        "Generación de reportes PDF de inventario",
-        "Gestión de imágenes de productos con Cloudinary",
-        "Documentación completa con Swagger UI"
-      ]
-    }
-  ],
-  "technologies": {
-    "primary": [
-      "Java",
-      "Spring Boot",
-      "Maven",
-      "PostgreSQL",
-      "Hibernate",
-      "SvelteKit",
-      "Git",
-      "Linux"
-    ],
-    "additional": [
-      "Python",
-      "FastAPI",
-      "MySQL",
-      "Docker",
-      "AWS",
-      "Azure",
-      "Postman",
-      "JavaScript",
-      "Cloudinary"
-    ]
-  },
-  "education": [
-    {
-      "degree": "Ingeniería en Software y Tecnologías Emergentes",
-      "location": "Universidad Autónoma de Baja California • Ensenada, México",
-      "period": "2023 - Presente"
-    }
-  ],
-  "footer": "© 2025 FrankSkep • Hecho con SvelteKit"
+	"personal": {
+		"name": "Francisco Cornejo Pacheco",
+		"nickname": "FrankSkep",
+		"location": "Ensenada, México",
+		"role": "Desarrollador Backend | Ingeniero de Software",
+		"description": "Desarrollador backend especializado en Java y Spring, con experiencia creando APIs robustas y arquitecturas bien diseñadas. También desarrollo frontend con SvelteKit, lo que me permite abordar soluciones de forma integral. Me apasiona escribir código limpio, escalable y aprender nuevas tecnologías para resolver problemas reales con impacto.",
+		"socials": {
+			"github": "https://github.com/FrankSkep",
+			"linkedin": "https://www.linkedin.com/in/FrankSkep",
+			"email": "f.cornejo.pacheco@gmail.com"
+		},
+		"status": "Disponible para nuevas oportunidades"
+	},
+	"projects": [
+		{
+			"name": "Fixium Ecosystem",
+			"description": "Plataforma integral para talleres de reparación iOS, que optimiza operaciones y seguridad mediante un backend multi-tenant en Java Spring Boot, un frontend multiplataforma en SvelteKit + Electron y un servicio local FastAPI para diagnósticos. Incorpora verificación facial con AWS Rekognition, herramientas técnicas impulsadas por IA y almacenamiento de imágenes en Cloudinary.",
+			"tech": [
+				"Java",
+				"Spring Boot",
+				"Python",
+				"FastAPI",
+				"PostgreSQL",
+				"SvelteKit",
+				"Electron",
+				"AWS Rekognition",
+				"Cloudinary"
+			],
+			"github": "https://github.com/FrankSkep/fixium-ecosystem",
+			"highlights": [
+				"Gestión completa de usuarios, talleres, clientes, dispositivos, tickets y reparaciones",
+				"Arquitectura multi-tenant con seguridad JWT",
+				"Verificación facial para operaciones críticas",
+				"Herramientas técnicas con IA (asistente técnico y análisis de panic logs)",
+				"Diagnóstico y restauración de dispositivos iOS con servicio local FastAPI"
+			]
+		},
+		{
+			"name": "Order Management Microservices",
+			"description": "Sistema backend de microservicios para gestionar productos, órdenes y pagos de forma escalable y segura. Utiliza Spring Cloud para configuración centralizada, descubrimiento de servicios y un API Gateway protegido con JWT, integrando comunicación eficiente entre microservicios con OpenFeign.",
+			"tech": ["Java", "Spring Boot", "Spring Cloud", "PostgreSQL", "OpenFeign"],
+			"github": "https://github.com/FrankSkep/orders-microservices",
+			"highlights": [
+				"Arquitectura completa de microservicios con Spring Cloud",
+				"Config Server centralizado y Eureka Discovery",
+				"API Gateway seguro con JWT y control de roles",
+				"Comunicación inter-servicios eficiente con OpenFeign",
+				"Documentación interactiva con Swagger UI"
+			]
+		},
+		{
+			"name": "Inventory REST API",
+			"description": "API RESTful modular para gestión de inventarios, productos y proveedores, con control de stock, generación de reportes PDF y almacenamiento de imágenes en Cloudinary. Desarrollada con Spring Boot y seguridad basada en JWT.",
+			"tech": ["Java", "Spring Boot", "MySQL", "Cloudinary", "Docker"],
+			"github": "https://github.com/FrankSkep/inventory-restful-api",
+			"highlights": [
+				"CRUD completo con validaciones y filtros",
+				"Notificaciones por bajo stock",
+				"Generación de reportes PDF de inventario",
+				"Gestión de imágenes de productos con Cloudinary",
+				"Documentación completa con Swagger UI"
+			]
+		}
+	],
+	"technologies": {
+		"primary": [
+			"Java",
+			"Spring Boot",
+			"Maven",
+			"PostgreSQL",
+			"Hibernate",
+			"SvelteKit",
+			"Git",
+			"Linux"
+		],
+		"additional": [
+			"Python",
+			"FastAPI",
+			"MySQL",
+			"Docker",
+			"AWS",
+			"Azure",
+			"Postman",
+			"JavaScript",
+			"Cloudinary"
+		]
+	},
+	"education": [
+		{
+			"degree": "Ingeniería en Software y Tecnologías Emergentes",
+			"location": "Universidad Autónoma de Baja California • Ensenada, México",
+			"period": "2023 - Presente"
+		}
+	],
+	"footer": "© 2025 FrankSkep • Hecho con SvelteKit"
 }

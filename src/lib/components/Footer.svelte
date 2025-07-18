@@ -1,7 +1,9 @@
 <script>
-  export let footer;
+	export let footer;
 </script>
 
-<footer class="max-w-4xl mx-auto px-6 py-8 mt-12 border-t border-[#2a2a35] text-center text-md text-[#9ca3af]">
-  <p>{footer}</p>
+<footer
+	class="text-md mx-auto mt-12 max-w-4xl border-t border-[#2a2a35] px-6 py-8 text-center text-[#9ca3af]"
+>
+	<p>{footer}</p>
 </footer>
