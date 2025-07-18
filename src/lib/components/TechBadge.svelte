@@ -88,7 +88,7 @@
 		minimal: 'border-none bg-transparent'
 	};
 
-	// Cachear resultados
+	// Cache results
 	let cachedIcon: string;
 	let cachedColor: string;
 	let cachedConfig: any;
@@ -111,10 +111,6 @@
 			'bg-[#2a1f35]/80 text-[#ba68c8] border-[#ba68c8]/30'
 		);
 	}
-
-	$: config = sizeConfigs[size];
-	$: variantClass = variantConfigs[variant];
-	$: colorClass = getTechColor(tech);
 </script>
 
 <span
