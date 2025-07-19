@@ -179,11 +179,48 @@
 
 	@media (max-width: 768px) {
 		:global(h1) {
-			font-size: 2.5rem !important;
+			font-size: 2.1rem !important;
+		}
+
+		:global(h2) {
+			font-size: 1.4rem !important;
+		}
+
+		:global(h3) {
+			font-size: 1rem !important;
+		}
+
+		:global(span) {
+			font-size: 0.975rem !important;
 		}
 
 		:global(section) {
 			padding: 2rem 1.5rem !important;
+		}
+
+		:global(footer) {
+			font-size: 0.875rem !important;
+		}
+		:global(button.fixed) {
+			bottom: 4.5rem !important;
+			right: 1rem !important;
+			padding: 0.75rem !important;
+		}
+
+        :global p {
+            font-size: 0.965rem;
+        }
+
+        :global h3 {
+            font-size: 1rem;
+        }
+
+        :global .text-sm {
+            font-size: 0.75rem;
+        }
+
+		:global(.space-y-8 > *:not(:last-child)) {
+			margin-bottom: 1rem;
 		}
 	}
 </style>
