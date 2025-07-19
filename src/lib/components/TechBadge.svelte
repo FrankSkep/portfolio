@@ -5,7 +5,7 @@
 	export let size: 'sm' | 'md' | 'lg' = 'md';
 	export let variant: 'default' | 'outline' | 'minimal' = 'default';
 
-	const techIcons = {
+	const techIcons: Record<string, string> = {
 		Java: 'logos:java',
 		'Spring Boot': 'logos:spring-icon',
 		Python: 'logos:python',
@@ -32,7 +32,7 @@
 		Hibernate: 'logos:hibernate'
 	};
 
-	const techColors = {
+	const techColors: Record<string, string> = {
 		Java: 'bg-[#2d1a0f]/80 text-[#ff8c42] border-[#ff8c42]/30',
 		'Spring Boot': 'bg-[#1a2e1a]/80 text-[#7dd87d] border-[#7dd87d]/30',
 		Python: 'bg-[#1a2a35]/80 text-[#4fc3f7] border-[#4fc3f7]/30',
@@ -59,27 +59,9 @@
 	};
 
 	const sizeConfigs = {
-		sm: {
-			padding: 'px-2 py-0.5',
-			text: 'text-xs',
-			icon: 12,
-			gap: 'gap-1',
-			radius: 'rounded'
-		},
-		md: {
-			padding: 'px-3 py-1',
-			text: 'text-sm',
-			icon: 16,
-			gap: 'gap-1.5',
-			radius: 'rounded-md'
-		},
-		lg: {
-			padding: 'px-4 py-2',
-			text: 'text-base',
-			icon: 20,
-			gap: 'gap-2',
-			radius: 'rounded-lg'
-		}
+		sm: { padding: 'px-2 py-0.5', text: 'text-xs', icon: 12, gap: 'gap-1', radius: 'rounded' },
+		md: { padding: 'px-3 py-1', text: 'text-sm', icon: 16, gap: 'gap-1.5', radius: 'rounded-md' },
+		lg: { padding: 'px-4 py-2', text: 'text-base', icon: 20, gap: 'gap-2', radius: 'rounded-lg' }
 	};
 
 	const variantConfigs = {
@@ -88,41 +70,22 @@
 		minimal: 'border-none bg-transparent'
 	};
 
-	// Cache results
-	let cachedIcon: string;
-	let cachedColor: string;
-	let cachedConfig: any;
-	let cachedVariantClass: string;
-
-	$: {
-		if (!cachedIcon) cachedIcon = getTechIcon(tech);
-		if (!cachedColor) cachedColor = getTechColor(tech);
-		if (!cachedConfig) cachedConfig = sizeConfigs[size];
-		if (!cachedVariantClass) cachedVariantClass = variantConfigs[variant];
-	}
-
-	function getTechIcon(tech: string): string {
-		return techIcons[tech as keyof typeof techIcons] || 'carbon:code';
-	}
-
-	function getTechColor(tech: string): string {
-		return (
-			techColors[tech as keyof typeof techColors] ||
-			'bg-[#2a1f35]/80 text-[#ba68c8] border-[#ba68c8]/30'
-		);
-	}
+	const getTechIcon = (tech: string) => techIcons[tech] || 'carbon:code';
+	const getTechColor = (tech: string) =>
+		techColors[tech] || 'bg-[#2a1f35]/80 text-[#ba68c8] border-[#ba68c8]/30';
 </script>
 
 <span
-	class="tech-badge inline-flex items-center {cachedConfig.padding} {cachedConfig.text} {cachedConfig.gap} {cachedConfig.radius} {cachedColor} {cachedVariantClass}
-  bg-opacity-80 cursor-default font-semibold shadow-sm
-  backdrop-blur-md transition-transform duration-200 select-none hover:scale-105"
+	class="inline-flex items-center {sizeConfigs[size].padding} {sizeConfigs[size].text} {sizeConfigs[
+		size
+	].gap} {sizeConfigs[size].radius} {getTechColor(tech)} {variantConfigs[variant]}
+    bg-opacity-80 cursor-default font-semibold shadow-sm backdrop-blur-md transition-transform duration-200 select-none hover:scale-105"
 	title={tech}
 >
 	<Icon
-		icon={cachedIcon}
-		width={cachedConfig.icon}
-		height={cachedConfig.icon}
+		icon={getTechIcon(tech)}
+		width={sizeConfigs[size].icon}
+		height={sizeConfigs[size].icon}
 		class="flex-shrink-0"
 	/>
 	<span>{tech}</span>
