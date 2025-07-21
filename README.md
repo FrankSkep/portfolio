@@ -13,7 +13,7 @@ This is my personal portfolio, developed with **SvelteKit** and **TailwindCSS**,
 
 ![Lighthouse Score](static/lighthouse-score.png)
 
-*Results generated with [Google Lighthouse](https://developers.google.com/web/tools/lighthouse).*
+_Results generated with [Google Lighthouse](https://developers.google.com/web/tools/lighthouse)._
 
 ## License
 

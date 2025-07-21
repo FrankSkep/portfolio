@@ -16,18 +16,18 @@
         {#each education as edu}
             <div class="rounded-lg border border-[#2a2a35] bg-[#1e1e28] p-6">
                 <div class="mb-3 flex flex-col sm:flex-row sm:items-start sm:justify-between">
-                    <h3 class="text-lg sm:text-xl font-semibold text-[#22d3ee]">
+                    <h3 class="text-lg font-semibold text-[#22d3ee] sm:text-xl">
                         {edu.degree}
                     </h3>
                     <span
-                        class="mt-2 sm:mt-0 rounded border border-[#2a2a35] bg-[#181825] px-3 py-1 text-xs sm:text-sm text-[#9ca3af]"
+                        class="mt-2 rounded border border-[#2a2a35] bg-[#181825] px-3 py-1 text-xs text-[#9ca3af] sm:mt-0 sm:text-sm"
                     >
                         {edu.period}
                     </span>
                 </div>
                 <div class="flex items-center gap-2">
                     <Icon icon="mdi:school" width="16" height="16" class="text-[#10b981]" />
-                    <span class="text-sm sm:text-base text-[#d1d5db]">{edu.location}</span>
+                    <span class="text-sm text-[#d1d5db] sm:text-base">{edu.location}</span>
                 </div>
             </div>
         {/each}
