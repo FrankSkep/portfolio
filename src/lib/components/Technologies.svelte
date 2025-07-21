@@ -10,7 +10,7 @@
 		<span class="text-sm font-medium text-[#22d3ee]"
 			><span class="text-[#fbbf24]">$</span> {t.commands.cat}</span
 		>
-		<h2 class="mt-2 mb-4 text-3xl font-bold text-[#f8fafc]">Technologies</h2>
+		<h2 class="mt-2 mb-4 text-3xl font-bold text-[#f8fafc]">{t.titles.technologies}</h2>
 		<p class="mb-8 text-lg text-[#d1d5db]">
 			{t.descriptions.technologies}
 		</p>

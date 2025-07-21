@@ -9,7 +9,7 @@
 		<span class="text-sm font-medium text-[#22d3ee]"
 			><span class="text-[#fbbf24]">$</span> {t.commands.connect}</span
 		>
-		<h2 class="mt-2 mb-4 text-3xl font-bold text-[#f8fafc]">Contact</h2>
+		<h2 class="mt-2 mb-4 text-3xl font-bold text-[#f8fafc]">{t.titles.contact}</h2>
 		<p class="mb-8 text-lg text-[#d1d5db]">
 			{t.descriptions.contact}
 		</p>

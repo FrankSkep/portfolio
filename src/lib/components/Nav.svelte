@@ -18,7 +18,7 @@
 		<div class="flex items-center justify-between">
 			<div class="font-mono text-sm text-[#22d3ee]">
 				<span class="text-[#fbbf24]">$</span>
-				{personal.nickname.toLowerCase()}
+				<span>{personal.nickname.toLowerCase()}</span>
 			</div>
 
 			<!-- Desktop navigation -->
