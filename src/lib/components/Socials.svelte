@@ -9,7 +9,9 @@
         <span class="text-sm font-medium text-[#22d3ee]"
             ><span class="text-[#fbbf24]">$</span> {t.commands.connect}</span
         >
-        <h2 class="mt-2 mb-4 text-3xl font-bold text-[#f8fafc]">{t.titles.contact}</h2>
+        <h2 class="mt-2 mb-4 text-3xl font-bold text-[#f8fafc]">
+            <Icon icon="mdi:account" width="24" height="24" class="inline-block text-[#ef4444]" />
+            {t.titles.contact}</h2>
         <p class="mb-8 text-lg text-[#d1d5db]">
             {t.descriptions.contact}
         </p>

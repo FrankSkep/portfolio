@@ -10,7 +10,9 @@
         <span class="text-sm font-medium text-[#22d3ee]"
             ><span class="text-[#fbbf24]">$</span> {t.commands.cat}</span
         >
-        <h2 class="mt-2 mb-4 text-3xl font-bold text-[#f8fafc]">{t.titles.technologies}</h2>
+        <h2 class="mt-2 mb-4 text-3xl font-bold text-[#f8fafc]">
+            <Icon icon="mdi:tools" width="24" height="24" class="inline-block text-[#10b981]" />
+            {t.titles.technologies}</h2>
         <p class="mb-8 text-lg text-[#d1d5db]">
             {t.descriptions.technologies}
         </p>
@@ -19,7 +21,7 @@
     <div class="space-y-10">
         <div>
             <h3 class="mb-6 flex items-center gap-2 text-xl font-semibold text-[#22d3ee]">
-                <Icon icon="mdi:star" width="20" height="20" class="text-[#fbbf24]" />
+                <Icon icon="mdi:lightbulb-on" width="20" height="20" class="text-[#fbbf24]" />
                 {t.labels.primaryTech}
             </h3>
             <div class="flex flex-wrap gap-3">

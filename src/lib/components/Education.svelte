@@ -9,7 +9,9 @@
         <span class="text-sm font-medium text-[#22d3ee]"
             ><span class="text-[#fbbf24]">$</span> {t.commands.education}</span
         >
-        <h2 class="mt-2 mb-6 text-3xl font-bold text-[#f8fafc]">{t.sections.education}</h2>
+        <h2 class="mt-2 mb-6 text-3xl font-bold text-[#f8fafc]">
+            <Icon icon="mdi:school" width="24" height="24" class="inline-block text-[#e879f9]" />
+            {t.sections.education}</h2>
     </div>
 
     <div class="space-y-6">
