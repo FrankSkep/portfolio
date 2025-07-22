@@ -19,13 +19,17 @@
             "tech": [
                 "Java",
                 "Spring Boot",
+                "JWT",
+                "Hibernate",
+                "Maven",
+                "AWS Rekognition",
+                "Cloudinary",
+                "Docker",
+                "PostgreSQL",
                 "Python",
                 "FastAPI",
-                "PostgreSQL",
                 "SvelteKit",
-                "Electron",
-                "AWS Rekognition",
-                "Cloudinary"
+                "Electron"
             ],
             "github": "https://github.com/FrankSkep/fixium-ecosystem",
             "highlights": [
@@ -39,7 +43,7 @@
         {
             "name": "Order Management Microservices",
             "description": "Sistema backend de microservicios para gestionar productos, órdenes y pagos de forma escalable y segura. Utiliza Spring Cloud para configuración centralizada, descubrimiento de servicios y un API Gateway protegido con JWT, integrando comunicación eficiente entre microservicios con OpenFeign.",
-            "tech": ["Java", "Spring Boot", "Spring Cloud", "PostgreSQL", "OpenFeign"],
+            "tech": ["Java", "Spring Boot", "JWT", "PostgreSQL", "Hibernate", "Maven"],
             "github": "https://github.com/FrankSkep/orders-microservices",
             "highlights": [
                 "Arquitectura completa de microservicios con Spring Cloud",
@@ -52,7 +56,7 @@
         {
             "name": "Inventory REST API",
             "description": "API RESTful modular para gestión de inventarios, productos y proveedores, con control de stock, generación de reportes PDF y almacenamiento de imágenes en Cloudinary. Desarrollada con Spring Boot y seguridad basada en JWT.",
-            "tech": ["Java", "Spring Boot", "MySQL", "Cloudinary", "Docker"],
+            "tech": ["Java", "Spring Boot", "JWT", "Hibernate", "Maven", "MySQL", "Cloudinary", "Docker"],
             "github": "https://github.com/FrankSkep/inventory-restful-api",
             "highlights": [
                 "CRUD completo con validaciones y filtros",

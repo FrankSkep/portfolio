@@ -190,7 +190,8 @@
             font-size: 1rem !important;
         }
 
-        :global(span) {
+        :global(span),
+        :global(button) {
             font-size: 0.975rem !important;
         }
 

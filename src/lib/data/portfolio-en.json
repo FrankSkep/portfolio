@@ -19,13 +19,17 @@
             "tech": [
                 "Java",
                 "Spring Boot",
+                "JWT",
+                "Hibernate",
+                "Maven",
+                "AWS Rekognition",
+                "Cloudinary",
+                "Docker",
+                "PostgreSQL",
                 "Python",
                 "FastAPI",
-                "PostgreSQL",
                 "SvelteKit",
-                "Electron",
-                "AWS Rekognition",
-                "Cloudinary"
+                "Electron"
             ],
             "github": "https://github.com/FrankSkep/fixium-ecosystem",
             "highlights": [
@@ -39,7 +43,7 @@
         {
             "name": "Order Management Microservices",
             "description": "Backend microservices system for managing products, orders and payments in a scalable and secure way. Uses Spring Cloud for centralized configuration, service discovery and a JWT-protected API Gateway, integrating efficient communication between microservices with OpenFeign.",
-            "tech": ["Java", "Spring Boot", "Spring Cloud", "PostgreSQL", "OpenFeign"],
+            "tech": ["Java", "Spring Boot", "JWT", "PostgreSQL", "Hibernate", "Maven"],
             "github": "https://github.com/FrankSkep/orders-microservices",
             "highlights": [
                 "Complete microservices architecture with Spring Cloud",
@@ -52,7 +56,7 @@
         {
             "name": "Inventory REST API",
             "description": "Modular RESTful API for inventory, product and supplier management, with stock control, PDF report generation and image storage in Cloudinary. Developed with Spring Boot and JWT-based security.",
-            "tech": ["Java", "Spring Boot", "MySQL", "Cloudinary", "Docker"],
+            "tech": ["Java", "Spring Boot", "JWT", "Hibernate", "Maven", "MySQL", "Cloudinary", "Docker"],
             "github": "https://github.com/FrankSkep/inventory-restful-api",
             "highlights": [
                 "Complete CRUD with validations and filters",

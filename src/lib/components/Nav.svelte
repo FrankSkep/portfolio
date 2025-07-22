@@ -26,7 +26,7 @@
                 {#each navItems as item}
                     <button
                         on:click={() => smoothScroll(item.id)}
-                        class="flex cursor-pointer items-center gap-2 rounded-lg px-3 py-2 text-sm transition-all hover:bg-[#272736] {currentSection ===
+                        class="flex cursor-pointer items-center gap-2 rounded-lg px-3 py-2 text-[15px] transition-all hover:bg-[#272736] {currentSection ===
                         item.id
                             ? 'bg-[#272736] text-[#22d3ee]'
                             : 'text-[#e5e7eb] hover:text-[#22d3ee]'}"
