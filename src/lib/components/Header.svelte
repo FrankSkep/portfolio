@@ -8,7 +8,7 @@
     <div class="mb-8">
         <!-- Terminal command -->
         <div class="mb-6">
-            <span class="text-sm font-medium text-[#22d3ee]"
+            <span class="command-text text-sm font-medium text-[#22d3ee]"
                 ><span class="text-[#fbbf24]">$</span> {t.commands.whoami}</span
             >
             <span class="animate-pulse text-[#22d3ee]">_</span>

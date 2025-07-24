@@ -223,5 +223,9 @@
         :global(.space-y-8 > *:not(:last-child)) {
             margin-bottom: 1rem;
         }
+
+        :global(.command-text) {
+            font-size: 0.745rem !important;
+        }
     }
 </style>

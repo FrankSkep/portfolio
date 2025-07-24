@@ -6,7 +6,7 @@
 
 <section id="education" class="mx-auto max-w-4xl px-6 py-16">
     <div class="mb-12">
-        <span class="text-sm font-medium text-[#22d3ee]"
+        <span class="command-text text-sm font-medium text-[#22d3ee]"
             ><span class="text-[#fbbf24]">$</span> {t.commands.education}</span
         >
         <h2 class="mt-2 mb-6 text-3xl font-bold text-[#f8fafc]">
