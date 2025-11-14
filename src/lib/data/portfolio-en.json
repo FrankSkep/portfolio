@@ -4,7 +4,7 @@
         "nickname": "FrankSkep",
         "location": "Ensenada, Mexico",
         "role": "Backend Developer | Software Engineer",
-        "description": "Backend developer specialized in Java and Spring, with experience creating robust APIs and well-designed architectures. I also develop frontend with SvelteKit, which allows me to approach solutions comprehensively. I'm passionate about writing clean, scalable code and learning new technologies to solve real problems with impact.",
+        "description": "Backend developer specialized in Java and Spring Boot, with experience building scalable APIs, microservices architectures, and multi-tenant systems. I handle both backend and frontend development with SvelteKit and template engines, allowing me to create complete full-stack solutions. I'm passionate about writing clean, maintainable code while applying best practices in security and design to solve real-world problems with impact.",
         "socials": {
             "github": "https://github.com/FrankSkep",
             "linkedin": "https://www.linkedin.com/in/FrankSkep",
@@ -13,6 +13,30 @@
         "status": "Available for new opportunities"
     },
     "projects": [
+        {
+            "name": "Jobsy REST API",
+            "description": "Marketplace platform connecting local service providers (plumbers, electricians, tutors) with clients. Complete system with manual provider verification, service management, booking system, reviews, geolocation, and real-time communication with WebSockets.",
+            "tech": [
+                "Java",
+                "Spring Boot",
+                "JWT",
+                "Hibernate",
+                "Maven",
+                "PostgreSQL",
+                "Cloudinary",
+                "WebSockets"
+            ],
+            "github": "https://github.com/FrankSkep/jobsy-rest-api",
+            "highlights": [
+                "Provider verification system with document validation (ID, tax ID, CURP)",
+                "Role-based access control (USER, PROVIDER, ADMIN, SUPER_ADMIN)",
+                "Booking system with availability management and status tracking",
+                "Geolocated provider search by category, distance, and rating",
+                "Real-time messaging with WebSockets between clients and providers",
+                "Dual notifications: in-app (WebSockets) and email for system events",
+                "Review and rating system for service transparency"
+            ]
+        },
         {
             "name": "Fixium Ecosystem",
             "description": "Comprehensive platform for iOS repair shops, optimizing operations and security through a multi-tenant backend in Java Spring Boot, a cross-platform frontend in SvelteKit + Electron, and a local FastAPI service for diagnostics. Incorporates facial verification with AWS Rekognition, AI-powered technical tools, and image storage in Cloudinary.",
@@ -56,7 +80,16 @@
         {
             "name": "Inventory REST API",
             "description": "Modular RESTful API for inventory, product and supplier management, with stock control, PDF report generation and image storage in Cloudinary. Developed with Spring Boot and JWT-based security.",
-            "tech": ["Java", "Spring Boot", "JWT", "Hibernate", "Maven", "MySQL", "Cloudinary", "Docker"],
+            "tech": [
+                "Java",
+                "Spring Boot",
+                "JWT",
+                "Hibernate",
+                "Maven",
+                "MySQL",
+                "Cloudinary",
+                "Docker"
+            ],
             "github": "https://github.com/FrankSkep/inventory-restful-api",
             "highlights": [
                 "Complete CRUD with validations and filters",
@@ -75,6 +108,7 @@
             "PostgreSQL",
             "Hibernate",
             "SvelteKit",
+            "Thymeleaf",
             "Git",
             "Linux"
         ],

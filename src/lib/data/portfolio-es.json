@@ -4,7 +4,7 @@
         "nickname": "FrankSkep",
         "location": "Ensenada, México",
         "role": "Desarrollador Backend | Ingeniero de Software",
-        "description": "Desarrollador backend especializado en Java y Spring, con experiencia creando APIs robustas y arquitecturas bien diseñadas. También desarrollo frontend con SvelteKit, lo que me permite abordar soluciones de forma integral. Me apasiona escribir código limpio, escalable y aprender nuevas tecnologías para resolver problemas reales con impacto.",
+        "description": "Desarrollador backend especializado en Java y Spring Boot, con experiencia construyendo APIs escalables, arquitecturas de microservicios y sistemas multi-tenant. Manejo tanto desarrollo backend como frontend con SvelteKit y motores de plantillas, permitiéndome crear soluciones full-stack completas. Me apasiona escribir código limpio y mantenible, mientras aplico las mejores prácticas de seguridad y diseño para resolver problemas reales con impacto.",
         "socials": {
             "github": "https://github.com/FrankSkep",
             "linkedin": "https://www.linkedin.com/in/FrankSkep",
@@ -13,6 +13,30 @@
         "status": "Disponible para nuevas oportunidades"
     },
     "projects": [
+        {
+            "name": "Jobsy REST API",
+            "description": "Plataforma marketplace que conecta proveedores de servicios locales (plomeros, electricistas, tutores) con clientes. Sistema completo con verificación manual de proveedores, gestión de servicios, sistema de reservas, reseñas, geolocalización y comunicación en tiempo real con WebSockets.",
+            "tech": [
+                "Java",
+                "Spring Boot",
+                "JWT",
+                "Hibernate",
+                "Maven",
+                "PostgreSQL",
+                "Cloudinary",
+                "WebSockets"
+            ],
+            "github": "https://github.com/FrankSkep/jobsy-rest-api",
+            "highlights": [
+                "Sistema de verificación de proveedores con validación de documentos (INE, RFC, CURP)",
+                "Control de acceso basado en roles (USER, PROVIDER, ADMIN, SUPER_ADMIN)",
+                "Sistema de reservas con gestión de disponibilidad y estados",
+                "Búsqueda geolocalizada de proveedores por categoría, distancia y calificación",
+                "Mensajería en tiempo real con WebSockets entre clientes y proveedores",
+                "Notificaciones duales: in-app (WebSockets) y email para eventos del sistema",
+                "Sistema de reseñas y calificaciones para transparencia de servicios"
+            ]
+        },
         {
             "name": "Fixium Ecosystem",
             "description": "Plataforma integral para talleres de reparación iOS, que optimiza operaciones y seguridad mediante un backend multi-tenant en Java Spring Boot, un frontend multiplataforma en SvelteKit + Electron y un servicio local FastAPI para diagnósticos. Incorpora verificación facial con AWS Rekognition, herramientas técnicas impulsadas por IA y almacenamiento de imágenes en Cloudinary.",
@@ -56,7 +80,16 @@
         {
             "name": "Inventory REST API",
             "description": "API RESTful modular para gestión de inventarios, productos y proveedores, con control de stock, generación de reportes PDF y almacenamiento de imágenes en Cloudinary. Desarrollada con Spring Boot y seguridad basada en JWT.",
-            "tech": ["Java", "Spring Boot", "JWT", "Hibernate", "Maven", "MySQL", "Cloudinary", "Docker"],
+            "tech": [
+                "Java",
+                "Spring Boot",
+                "JWT",
+                "Hibernate",
+                "Maven",
+                "MySQL",
+                "Cloudinary",
+                "Docker"
+            ],
             "github": "https://github.com/FrankSkep/inventory-restful-api",
             "highlights": [
                 "CRUD completo con validaciones y filtros",
@@ -75,6 +108,7 @@
             "PostgreSQL",
             "Hibernate",
             "SvelteKit",
+            "Thymeleaf",
             "Git",
             "Linux"
         ],

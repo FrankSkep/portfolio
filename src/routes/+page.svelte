@@ -96,7 +96,7 @@
 {#if showScrollTop}
     <button
         on:click={() => smoothScroll('home')}
-        class="fixed right-6 bottom-6 z-50 cursor-pointer rounded-full bg-[#22d3ee] p-3 text-[#0a0a0f] shadow-lg transition-colors hover:bg-[#0891b2]"
+        class="scroll-to-top fixed right-6 bottom-6 z-50 cursor-pointer rounded-full bg-gradient-to-br from-[#3b82f6] to-[#1e40af] p-4 text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/40"
         title={t.labels.backToTop}
     >
         <Icon icon="mdi:arrow-up" width="24" height="24" />
@@ -110,8 +110,22 @@
         margin-left: auto;
         margin-right: auto;
         height: 1px;
-        background: linear-gradient(to right, transparent, #2d69e252, transparent);
+        background: linear-gradient(to right, transparent, #6b728080, transparent);
+        box-shadow: 0 0 15px rgba(107, 114, 128, 0.2);
         contain: layout style paint;
+        animation: glow-pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes glow-pulse {
+        0%,
+        100% {
+            opacity: 0.5;
+            box-shadow: 0 0 15px rgba(107, 114, 128, 0.2);
+        }
+        50% {
+            opacity: 0.8;
+            box-shadow: 0 0 20px rgba(107, 114, 128, 0.3);
+        }
     }
 
     :global(body) {
@@ -126,7 +140,29 @@
             sans-serif;
         scroll-behavior: smooth;
         background: #0a0a0f;
+        background-image:
+            radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.05) 0px, transparent 50%),
+            radial-gradient(at 100% 100%, rgba(30, 58, 138, 0.08) 0px, transparent 50%);
         color: #e5e7eb;
+        position: relative;
+    }
+
+    :global(body::before) {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(59, 130, 246, 0.02) 2px,
+            rgba(59, 130, 246, 0.02) 4px
+        );
+        pointer-events: none;
+        z-index: 1;
     }
 
     :global(*) {
@@ -139,42 +175,45 @@
 
     /* Scrollbar */
     :global(::-webkit-scrollbar) {
-        width: 8px;
+        width: 10px;
     }
 
     :global(::-webkit-scrollbar-track) {
         background: #0a0a0f;
+        border-left: 1px solid #2a2a35;
     }
 
     :global(::-webkit-scrollbar-thumb) {
-        background: #2a2a35;
-        border-radius: 4px;
+        background: linear-gradient(180deg, #3b82f6, #1e3a8a);
+        border-radius: 10px;
+        border: 2px solid #0a0a0f;
     }
 
     :global(::-webkit-scrollbar-thumb:hover) {
-        background: #22d3ee;
+        background: linear-gradient(180deg, #60a5fa, #2563eb);
+        box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
     }
 
     /* Selection effects */
     :global(::selection) {
-        background: #22d3ee;
-        color: #0a0a0f;
+        background: #3b82f6;
+        color: #fff;
     }
 
     /* Fade-in animation */
     @keyframes fade-in {
         from {
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(30px) scale(0.95);
         }
         to {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0) scale(1);
         }
     }
 
     .animate-fade-in {
-        animation: fade-in 1s ease-out;
+        animation: fade-in 1.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     @media (max-width: 768px) {

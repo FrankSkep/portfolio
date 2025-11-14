@@ -25,7 +25,8 @@
         Electron: 'logos:electron',
         'AWS Rekognition': 'logos:aws',
         Maven: 'logos:maven',
-        Hibernate: 'logos:hibernate'
+        Hibernate: 'logos:hibernate',
+        Thymeleaf: 'simple-icons:thymeleaf'
     };
 
     const techColors: Record<string, string> = {
@@ -48,7 +49,8 @@
         JWT: 'bg-[#2a1a35]/80 text-[#9c27b0] border-[#9c27b0]/30',
         Maven: 'bg-[#2a1a1a]/80 text-[#f57c00] border-[#f57c00]/30',
         Hibernate: 'bg-[#2a1f1a]/80 text-[#8d6e63] border-[#8d6e63]/30',
-        'AWS Rekognition': 'bg-[#351a1a]/80 text-[#ff5252] border-[#ff5252]/30'
+        'AWS Rekognition': 'bg-[#351a1a]/80 text-[#ff5252] border-[#ff5252]/30',
+        Thymeleaf: 'bg-[#1a2e1a]/80 text-[#81c784] border-[#81c784]/30'
     };
 
     const sizeConfigs = {
@@ -81,24 +83,29 @@
 </script>
 
 <span
-    class="inline-flex items-center {sizeConfigs[size].padding} {sizeConfigs[size]
+    class="tech-badge inline-flex items-center {sizeConfigs[size].padding} {sizeConfigs[size]
         .text} {sizeConfigs[size].gap} {sizeConfigs[size].radius} {getTechColor(
         tech
     )} {variantConfigs[variant]}
-    bg-opacity-80 cursor-default font-semibold shadow-sm backdrop-blur-md transition-transform duration-200 select-none hover:scale-105"
+    bg-opacity-80 group relative cursor-default overflow-hidden font-semibold shadow-lg backdrop-blur-md transition-all duration-300 select-none hover:scale-110 hover:shadow-xl hover:brightness-125"
     title={tech}
 >
+    <span
+        class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full"
+    ></span>
+
     <Icon
         icon={getTechIcon(tech)}
         width={sizeConfigs[size].icon}
         height={sizeConfigs[size].icon}
-        class="flex-shrink-0"
+        class="z-10 flex-shrink-0 transition-transform duration-300 group-hover:rotate-12"
     />
-    <span>{tech}</span>
+    <span class="z-10">{tech}</span>
 </span>
 
 <style>
     .tech-badge {
-        backdrop-filter: blur(6px);
+        backdrop-filter: blur(10px);
+        position: relative;
     }
 </style>
