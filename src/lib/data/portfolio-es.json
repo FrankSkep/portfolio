@@ -25,10 +25,7 @@
                 "Apliqué refactorización estructural a código legado para mejorar mantenibilidad.",
                 "Ejecuté mantenimiento correctivo y evolutivo en sistemas en producción.",
                 "Gestioné ramas y merges en flujos colaborativos con GitLab.",
-                "Elaboré documentación técnica de módulos y procesos.",
-                "Participé en levantamiento y análisis de requerimientos con usuarios clave.",
-                "Automaticé tareas internas repetitivas.",
-                "Capacité y di soporte a usuarios finales."
+                "Elaboré documentación técnica de módulos y procesos."
             ],
             "technologies": [
                 "Java",

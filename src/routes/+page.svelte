@@ -78,9 +78,9 @@
 <div class="animate-fade-in min-h-screen bg-[#1c1c21] pt-12 font-mono text-[#e5e7eb]">
     <Header {personal} {t} />
     <div class="section-separator"></div>
-    <Projects {projects} {showHighlights} {t} />
-    <div class="section-separator"></div>
     <Experience {experience} {t} />
+    <div class="section-separator"></div>
+    <Projects {projects} {showHighlights} {t} />
     <div class="section-separator"></div>
     <Technologies {technologies} {t} />
     <div class="section-separator"></div>

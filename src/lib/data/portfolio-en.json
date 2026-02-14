@@ -25,10 +25,7 @@
                 "Applied structural refactoring to legacy code to improve maintainability.",
                 "Performed corrective and evolutionary maintenance on production systems.",
                 "Managed branches and merges in collaborative GitLab workflows.",
-                "Produced technical documentation for modules and processes.",
-                "Participated in requirements gathering and analysis with key users.",
-                "Automated repetitive internal tasks.",
-                "Provided support and training to end users."
+                "Produced technical documentation for modules and processes."
             ],
             "technologies": [
                 "Java",
