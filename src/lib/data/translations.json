@@ -4,6 +4,7 @@
             "whoami": "whoami",
             "cat": "cat ~/.tech-stack",
             "ls": "ls -la ~/projects",
+            "experience": "experience --show",
             "education": "education --list",
             "connect": "connect --socials"
         },
@@ -11,12 +12,14 @@
             "home": "Home",
             "projects": "Projects",
             "technologies": "Technologies",
+            "experience": "Experience",
             "education": "Education",
             "contact": "Contact"
         },
         "titles": {
             "projects": "Projects",
             "technologies": "Technologies",
+            "experience": "Experience",
             "education": "Education",
             "contact": "Contact"
         },
@@ -37,6 +40,7 @@
             "email": "Email",
             "backToTop": "Back to top",
             "status": "Status",
+            "responsibilities": "Key Responsibilities",
             "techNote": "Although my specialty is backend development, I am also passionate about working on fullstack projects to understand and add value to the entire product lifecycle."
         }
     },
@@ -45,6 +49,7 @@
             "whoami": "whoami",
             "cat": "cat ~/.tech-stack",
             "ls": "ls -la ~/projects",
+            "experience": "experience --show",
             "education": "education --list",
             "connect": "connect --socials"
         },
@@ -52,12 +57,14 @@
             "home": "Inicio",
             "projects": "Proyectos",
             "technologies": "Tecnologías",
+            "experience": "Experiencia",
             "education": "Educación",
             "contact": "Contacto"
         },
         "titles": {
             "projects": "Proyectos",
             "technologies": "Tecnologías",
+            "experience": "Experiencia",
             "education": "Educación",
             "contact": "Contacto"
         },
@@ -78,6 +85,7 @@
             "email": "Email",
             "backToTop": "Volver arriba",
             "status": "Estado",
+            "responsibilities": "Responsabilidades Principales",
             "techNote": "Aunque mi especialidad es el desarrollo backend, también me apasiona trabajar en proyectos fullstack para comprender y aportar valor a todo el ciclo de vida del producto."
         }
     }

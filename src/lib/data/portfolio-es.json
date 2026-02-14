@@ -12,6 +12,35 @@
         },
         "status": "Disponible para nuevas oportunidades"
     },
+    "experience": [
+        {
+            "position": "Desarrollador Fullstack",
+            "company": "Departamento de Desarrollo de Sistemas - Universidad Autónoma de Baja California",
+            "location": "Presencial - Ensenada, México",
+            "period": "2025 - Presente",
+            "description": "Contribución directa a la evolución técnica de sistemas contables y financieros institucionales, mejorando calidad de código, confiabilidad funcional y eficiencia operativa mediante desarrollo modular, validaciones de negocio y optimización de procesos.",
+            "responsibilities": [
+                "Desarrollé nuevos módulos funcionales bajo arquitectura MVC.",
+                "Implementé reglas de negocio y validaciones de datos a nivel de aplicación.",
+                "Apliqué refactorización estructural a código legado para mejorar mantenibilidad.",
+                "Ejecuté mantenimiento correctivo y evolutivo en sistemas en producción.",
+                "Gestioné ramas y merges en flujos colaborativos con GitLab.",
+                "Elaboré documentación técnica de módulos y procesos.",
+                "Participé en levantamiento y análisis de requerimientos con usuarios clave.",
+                "Automaticé tareas internas repetitivas.",
+                "Capacité y di soporte a usuarios finales."
+            ],
+            "technologies": [
+                "Java",
+                "Spring Boot",
+                "PostgreSQL",
+                "Maven",
+                "Git",
+                "GitLab",
+                "Thymeleaf"
+            ]
+        }
+    ],
     "projects": [
         {
             "name": "Jobsy REST API",

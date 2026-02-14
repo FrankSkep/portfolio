@@ -7,6 +7,7 @@
     import Nav from '$lib/components/Nav.svelte';
     import Header from '$lib/components/Header.svelte';
     import Projects from '$lib/components/Projects.svelte';
+    import Experience from '$lib/components/Experience.svelte';
     import Technologies from '$lib/components/Technologies.svelte';
     import Education from '$lib/components/Education.svelte';
     import Socials from '$lib/components/Socials.svelte';
@@ -24,11 +25,12 @@
     // Reactive data based on language with specific types
     $: portfolioData = $currentLanguage === 'es' ? portfolioDataEs : portfolioDataEn;
     $: t = translations[$currentLanguage as Language];
-    $: ({ personal, projects, technologies, education, footer } = portfolioData);
+    $: ({ personal, projects, experience, technologies, education, footer } = portfolioData);
 
     $: navItems = [
         { id: 'home', label: t.sections.home, icon: 'mdi:home' },
         { id: 'projects', label: t.sections.projects, icon: 'mdi:folder' },
+        { id: 'experience', label: t.sections.experience, icon: 'mdi:briefcase' },
         { id: 'technologies', label: t.sections.technologies, icon: 'mdi:tools' },
         { id: 'education', label: t.sections.education, icon: 'mdi:school' },
         { id: 'socials', label: t.sections.contact, icon: 'mdi:account' }
@@ -36,7 +38,7 @@
 
     function handleScroll() {
         showScrollTop = window.scrollY > 300;
-        const sections = ['home', 'projects', 'technologies', 'education', 'socials'];
+        const sections = ['home', 'projects', 'experience', 'technologies', 'education', 'socials'];
         const scrollPosition = window.scrollY + 100;
 
         for (const section of sections) {
@@ -77,6 +79,8 @@
     <Header {personal} {t} />
     <div class="section-separator"></div>
     <Projects {projects} {showHighlights} {t} />
+    <div class="section-separator"></div>
+    <Experience {experience} {t} />
     <div class="section-separator"></div>
     <Technologies {technologies} {t} />
     <div class="section-separator"></div>

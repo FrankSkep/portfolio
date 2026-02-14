@@ -12,6 +12,35 @@
         },
         "status": "Available for new opportunities"
     },
+    "experience": [
+        {
+            "position": "Fullstack Developer",
+            "company": "Systems Development Department - Autonomous University of Baja California",
+            "location": "On-site - Ensenada, Mexico",
+            "period": "2025 - Present",
+            "description": "Direct contribution to the technical evolution of institutional accounting and financial systems, improving code quality, functional reliability, and operational efficiency through modular development, business rule validation, and process optimization.",
+            "responsibilities": [
+                "Developed new functional modules under MVC architecture.",
+                "Implemented business rules and application-level data validations.",
+                "Applied structural refactoring to legacy code to improve maintainability.",
+                "Performed corrective and evolutionary maintenance on production systems.",
+                "Managed branches and merges in collaborative GitLab workflows.",
+                "Produced technical documentation for modules and processes.",
+                "Participated in requirements gathering and analysis with key users.",
+                "Automated repetitive internal tasks.",
+                "Provided support and training to end users."
+            ],
+            "technologies": [
+                "Java",
+                "Spring Boot",
+                "PostgreSQL",
+                "Maven",
+                "Git",
+                "GitLab",
+                "Thymeleaf"
+            ]
+        }
+    ],
     "projects": [
         {
             "name": "Jobsy REST API",
