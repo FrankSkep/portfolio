@@ -10,6 +10,7 @@
     import Experience from '$lib/components/Experience.svelte';
     import Technologies from '$lib/components/Technologies.svelte';
     import Education from '$lib/components/Education.svelte';
+    import Certifications from '$lib/components/Certifications.svelte';
     import Socials from '$lib/components/Socials.svelte';
     import Footer from '$lib/components/Footer.svelte';
     import Icon from '@iconify/svelte';
@@ -25,7 +26,7 @@
     // Reactive data based on language with specific types
     $: portfolioData = $currentLanguage === 'es' ? portfolioDataEs : portfolioDataEn;
     $: t = translations[$currentLanguage as Language];
-    $: ({ personal, projects, experience, technologies, education, footer } = portfolioData);
+    $: ({ personal, projects, experience, technologies, education, certifications, footer } = portfolioData);
 
     $: navItems = [
         { id: 'home', label: t.sections.home, icon: 'mdi:home' },
@@ -33,12 +34,13 @@
         { id: 'experience', label: t.sections.experience, icon: 'mdi:briefcase' },
         { id: 'technologies', label: t.sections.technologies, icon: 'mdi:tools' },
         { id: 'education', label: t.sections.education, icon: 'mdi:school' },
+        { id: 'certifications', label: t.sections.certifications, icon: 'mdi:certificate' },
         { id: 'socials', label: t.sections.contact, icon: 'mdi:account' }
     ];
 
     function handleScroll() {
         showScrollTop = window.scrollY > 300;
-        const sections = ['home', 'projects', 'experience', 'technologies', 'education', 'socials'];
+        const sections = ['home', 'projects', 'experience', 'technologies', 'education', 'certifications', 'socials'];
         const scrollPosition = window.scrollY + 100;
 
         for (const section of sections) {
@@ -85,6 +87,8 @@
     <Technologies {technologies} {t} />
     <div class="section-separator"></div>
     <Education {education} {t} />
+    <div class="section-separator"></div>
+    <Certifications {certifications} {t} />
     <div class="section-separator"></div>
     <Socials
         socials={[

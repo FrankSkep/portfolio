@@ -17,7 +17,7 @@
             "position": "Fullstack Developer",
             "company": "Systems Development Department - Autonomous University of Baja California",
             "location": "On-site - Ensenada, Mexico",
-            "period": "2025 - Present",
+            "period": "2025 - 2026",
             "description": "Direct contribution to the technical evolution of institutional accounting and financial systems, improving code quality, functional reliability, and operational efficiency through modular development, business rule validation, and process optimization.",
             "responsibilities": [
                 "Developed new functional modules under MVC architecture.",
@@ -155,6 +155,38 @@
             "degree": "Software Engineering and Emerging Technologies",
             "location": "Universidad Autónoma de Baja California • Ensenada, Mexico",
             "period": "2023 - Present"
+        }
+    ],
+    "certifications": [
+        {
+            "name": "Software Engineer",
+            "issuer": "HackerRank",
+            "date": "2026",
+            "url": "https://www.hackerrank.com/certificates/aab5e84cdd47"
+        },
+        {
+            "name": "Java Basic",
+            "issuer": "HackerRank",
+            "date": "2025",
+            "url": "https://www.hackerrank.com/certificates/1d3a0ec7c0b5"
+        },
+        {
+            "name": "Back End Development and APIs V8",
+            "issuer": "freeCodeCamp",
+            "date": "2025",
+            "url": "https://www.freecodecamp.org/certification/frankskep/back-end-development-and-apis"
+        },
+        {
+            "name": "Java Intermediate",
+            "issuer": "SoloLearn",
+            "date": "2024",
+            "url": "https://www.sololearn.com/certificates/CC-LQK4SDQN"
+        },
+        {
+            "name": "Career Essentials Certificate by Microsoft and LinkedIn",
+            "issuer": "Microsoft and LinkedIn Learning",
+            "date": "2023",
+            "url": "https://www.linkedin.com/learning/certificates/2bccd64edd1016ad08cf417abba0efbd0874f76031f97e8acba01809729db677"
         }
     ],
     "footer": "© 2025 FrankSkep • Built with SvelteKit"

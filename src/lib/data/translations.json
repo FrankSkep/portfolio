@@ -14,6 +14,7 @@
             "technologies": "Technologies",
             "experience": "Experience",
             "education": "Education",
+            "certifications": "Certifications",
             "contact": "Contact"
         },
         "titles": {
@@ -21,11 +22,13 @@
             "technologies": "Technologies",
             "experience": "Experience",
             "education": "Education",
+            "certifications": "Certifications",
             "contact": "Contact"
         },
         "descriptions": {
             "projects": "Here are some of my most important projects:",
             "technologies": "Technology stack I regularly work with:",
+            "certifications": "Professional certifications and courses I have completed:",
             "contact": "You can find me on the following platforms:"
         },
         "labels": {
@@ -41,7 +44,9 @@
             "backToTop": "Back to top",
             "status": "Status",
             "responsibilities": "Key Responsibilities",
-            "techNote": "Although my specialty is backend development, I am also passionate about working on fullstack projects to understand and add value to the entire product lifecycle."
+            "techNote": "Although my specialty is backend development, I am also passionate about working on fullstack projects to understand and add value to the entire product lifecycle.",
+            "viewCertificate": "View Certificate",
+            "issuedBy": "Issued by"
         }
     },
     "es": {
@@ -59,6 +64,7 @@
             "technologies": "Tecnologías",
             "experience": "Experiencia",
             "education": "Educación",
+            "certifications": "Certificaciones",
             "contact": "Contacto"
         },
         "titles": {
@@ -66,11 +72,13 @@
             "technologies": "Tecnologías",
             "experience": "Experiencia",
             "education": "Educación",
+            "certifications": "Certificaciones",
             "contact": "Contacto"
         },
         "descriptions": {
             "projects": "Los siguientes son algunos de mis proyectos más importantes:",
             "technologies": "Stack tecnológico con el que trabajo regularmente:",
+            "certifications": "Certificaciones profesionales y cursos que he completado:",
             "contact": "Puedes encontrarme en las siguientes plataformas:"
         },
         "labels": {
@@ -86,7 +94,9 @@
             "backToTop": "Volver arriba",
             "status": "Estado",
             "responsibilities": "Responsabilidades Principales",
-            "techNote": "Aunque mi especialidad es el desarrollo backend, también me apasiona trabajar en proyectos fullstack para comprender y aportar valor a todo el ciclo de vida del producto."
+            "techNote": "Aunque mi especialidad es el desarrollo backend, también me apasiona trabajar en proyectos fullstack para comprender y aportar valor a todo el ciclo de vida del producto.",
+            "viewCertificate": "Ver Certificado",
+            "issuedBy": "Emitido por"
         }
     }
 }

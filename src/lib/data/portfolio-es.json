@@ -17,7 +17,7 @@
             "position": "Desarrollador Fullstack",
             "company": "Departamento de Desarrollo de Sistemas - Universidad Autónoma de Baja California",
             "location": "Presencial - Ensenada, México",
-            "period": "2025 - Presente",
+            "period": "2025 - 2026",
             "description": "Contribución directa a la evolución técnica de sistemas contables y financieros institucionales, mejorando calidad de código, confiabilidad funcional y eficiencia operativa mediante desarrollo modular, validaciones de negocio y optimización de procesos.",
             "responsibilities": [
                 "Desarrollé nuevos módulos funcionales bajo arquitectura MVC.",
@@ -155,6 +155,38 @@
             "degree": "Ingeniería en Software y Tecnologías Emergentes",
             "location": "Universidad Autónoma de Baja California • Ensenada, México",
             "period": "2023 - Presente"
+        }
+    ],
+    "certifications": [
+        {
+            "name": "Software Engineer",
+            "issuer": "HackerRank",
+            "date": "2026",
+            "url": "https://www.hackerrank.com/certificates/aab5e84cdd47"
+        },
+        {
+            "name": "Java Basic",
+            "issuer": "HackerRank",
+            "date": "2025",
+            "url": "https://www.hackerrank.com/certificates/1d3a0ec7c0b5"
+        },
+        {
+            "name": "Back End Development and APIs V8",
+            "issuer": "freeCodeCamp",
+            "date": "2025",
+            "url": "https://www.freecodecamp.org/certification/frankskep/back-end-development-and-apis"
+        },
+        {
+            "name": "Java Intermedio",
+            "issuer": "SoloLearn",
+            "date": "2024",
+            "url": "https://www.sololearn.com/certificates/CC-LQK4SDQN"
+        },
+        {
+            "name": "Fundamentos profesionales del desarrollo de software, por Microsoft y LinkedIn",
+            "issuer": "Microsoft y LinkedIn Learning",
+            "date": "2023",
+            "url": "https://www.linkedin.com/learning/certificates/2bccd64edd1016ad08cf417abba0efbd0874f76031f97e8acba01809729db677"
         }
     ],
     "footer": "© 2025 FrankSkep • Hecho con SvelteKit"
