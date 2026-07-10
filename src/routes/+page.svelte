@@ -77,7 +77,7 @@
 
 <Nav {personal} {navItems} {currentSection} {mobileMenuOpen} {toggleMobileMenu} {smoothScroll} />
 
-<div class="animate-fade-in min-h-screen bg-[#1c1c21] pt-12 font-mono text-[#e5e7eb]">
+<div class="animate-fade-in min-h-screen bg-[#0a0a0f] pt-16 font-mono text-[#e5e7eb]">
     <Header {personal} {t} />
     <div class="section-separator"></div>
     <Experience {experience} {t} />
@@ -149,10 +149,11 @@
         scroll-behavior: smooth;
         background: #0a0a0f;
         background-image:
-            radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.05) 0px, transparent 50%),
-            radial-gradient(at 100% 100%, rgba(30, 58, 138, 0.08) 0px, transparent 50%);
+            radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.03) 0px, transparent 50%),
+            radial-gradient(at 100% 100%, rgba(30, 58, 138, 0.05) 0px, transparent 50%);
         color: #e5e7eb;
         position: relative;
+        overflow-x: hidden;
     }
 
     :global(body::before) {
@@ -166,11 +167,11 @@
             0deg,
             transparent,
             transparent 2px,
-            rgba(59, 130, 246, 0.02) 2px,
-            rgba(59, 130, 246, 0.02) 4px
+            rgba(59, 130, 246, 0.015) 2px,
+            rgba(59, 130, 246, 0.015) 4px
         );
         pointer-events: none;
-        z-index: 1;
+        z-index: 0;
     }
 
     :global(*) {
@@ -178,7 +179,7 @@
     }
 
     :global(html) {
-        scroll-padding-top: 100px;
+        scroll-padding-top: 80px;
     }
 
     /* Scrollbar */

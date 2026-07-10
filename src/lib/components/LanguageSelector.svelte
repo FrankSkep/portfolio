@@ -41,59 +41,44 @@
     $: currentLang = $currentLanguage as LanguageKey;
 </script>
 
-<div class="relative" bind:this={buttonElement}>
+<div class="language-selector relative" bind:this={buttonElement}>
     <button
         on:click={toggleLanguage}
-        class="flex min-w-[90px] cursor-pointer items-center justify-center gap-2 rounded-lg border border-[#2a2a35] px-3 py-2 text-sm text-[#e5e7eb] transition-all duration-300
-               hover:border-[#3b82f6]/30 hover:bg-[#272736] hover:text-[#60a5fa] hover:shadow-lg hover:shadow-blue-500/15 md:min-w-[auto] md:justify-start"
-        title="Cambiar idioma / Change language"
+        class="flex min-w-[90px] cursor-pointer items-center justify-center gap-2 rounded-lg border border-[#2a2a35] bg-[#0a0a0f]/50 px-3 py-1.5 text-sm font-medium text-[#d1d5db] 
+               transition-all duration-300 hover:border-[#3b82f6]/40 hover:bg-[#1e1e28] hover:text-[#e5e7eb] md:min-w-[auto] md:justify-start"
+        title="Change language / Cambiar idioma"
+        aria-label="Language selector"
     >
-        <span class="text-base transition-transform duration-300 hover:scale-125"
-            >{languages[currentLang].flag}</span
-        >
+        <span class="text-base">{languages[currentLang].flag}</span>
+        <span class="hidden md:inline">{languages[currentLang].code}</span>
         <Icon
             icon="mdi:chevron-down"
             width="16"
             height="16"
-            class="transition-all duration-300 {isOpen ? 'rotate-180 text-[#60a5fa]' : ''}"
+            class="transition-all duration-300 {isOpen ? 'rotate-180' : ''}"
         />
     </button>
 
     {#if isOpen}
         <div
-            class="animate-dropdown absolute top-full right-0 z-50 mt-2 w-40 overflow-hidden rounded-xl border border-[#3b82f6]/30 bg-gradient-to-br from-[#1c1c21]/98
-                   to-[#181825]/98 shadow-2xl shadow-blue-500/15 backdrop-blur-md md:right-0 md:w-auto md:min-w-max"
+            class="dropdown-menu absolute top-full right-0 z-[60] mt-2 min-w-[180px] overflow-hidden rounded-lg border border-[#2a2a35] bg-[#0a0a0f]/98 shadow-xl shadow-black/40 backdrop-blur-xl"
         >
             {#each Object.entries(languages) as [lang, info]}
                 <button
                     on:click={() => selectLanguage(lang)}
-                    class="group relative flex min-h-[44px] w-full items-center gap-3 overflow-hidden px-4 py-3 text-left
-                           transition-all duration-200 hover:bg-gradient-to-r hover:from-[#272736] hover:to-[#1e1e28] md:min-h-[auto] {lang ===
-                    currentLang
-                        ? 'bg-gradient-to-r from-[#272736] to-[#1e1e28] text-[#60a5fa]'
-                        : 'text-[#e5e7eb]'}"
+                    class="group flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm font-medium transition-all duration-200
+                           {lang === currentLang
+                        ? 'bg-[#1e1e28] text-[#60a5fa]'
+                        : 'text-[#d1d5db] hover:bg-[#1a1a24] hover:text-[#e5e7eb]'}"
                 >
-                    <span
-                        class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/5 to-transparent transition-transform duration-500 group-hover:translate-x-full"
-                    ></span>
-
-                    <span
-                        class="z-10 text-base transition-transform duration-200 group-hover:scale-125 md:text-base"
-                        >{info.flag}</span
-                    >
-                    <span
-                        class="z-10 flex-1 text-sm {lang === currentLang
-                            ? 'text-[#60a5fa] drop-shadow-[0_0_8px_rgba(96,165,250,0.3)]'
-                            : 'text-[#e5e7eb] group-hover:text-[#60a5fa]'} transition-all duration-200"
-                    >
-                        {info.name}
-                    </span>
+                    <span class="text-base">{info.flag}</span>
+                    <span class="flex-1">{info.name}</span>
                     {#if lang === currentLang}
                         <Icon
                             icon="mdi:check-circle"
                             width="16"
                             height="16"
-                            class="z-10 flex-shrink-0 text-[#60a5fa] drop-shadow-[0_0_6px_rgba(96,165,250,0.5)]"
+                            class="text-[#60a5fa]"
                         />
                     {/if}
                 </button>
@@ -103,15 +88,18 @@
 </div>
 
 <style>
-    /* Smooth animation for dropdown */
-    div:global(.animate-dropdown) {
-        animation: slideDown 0.2s ease-out;
+    .language-selector {
+        z-index: 50;
+    }
+
+    .dropdown-menu {
+        animation: slideDown 0.15s ease-out;
     }
 
     @keyframes slideDown {
         from {
             opacity: 0;
-            transform: translateY(-8px);
+            transform: translateY(-4px);
         }
         to {
             opacity: 1;
@@ -119,13 +107,28 @@
         }
     }
 
-    div:global(.language-dropdown) {
-        z-index: 9999;
+    /* Prevent text selection */
+    button span {
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+
+    /* Remove default button outlines */
+    button:focus {
+        outline: none;
+    }
+
+    button:focus-visible {
+        outline: 2px solid rgba(59, 130, 246, 0.5);
+        outline-offset: 2px;
     }
 
     @media (max-width: 768px) {
         button {
             -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
     }
 </style>
